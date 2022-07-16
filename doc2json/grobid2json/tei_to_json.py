@@ -78,9 +78,7 @@ def parse_bibliography(soup: BeautifulSoup) -> List[Dict]:
     structured_entries = []
     for entry in entries:
         bib_entry = parse_bib_entry(entry)
-        # add bib entry only if it has a title
-        if bib_entry['title']:
-            structured_entries.append(bib_entry)
+        structured_entries.append(bib_entry)
 
     bibliography.decompose()
 
